@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import Button from '../../UI/Button/Button';
 import './CourseInput.css';
 
 const CourseInput = (props) => {
@@ -12,16 +12,20 @@ const CourseInput = (props) => {
   const formSubmitHandler = (event) => {
     event.preventDefault();
     props.onAddGoal(enteredValue);
+    setEnteredValue('');
   };
 
   return (
     <form onSubmit={formSubmitHandler}>
       <div className='form-control'>
         <label>Course Goal</label>
-        <input type='text' onChange={goalInputChangeHandler}></input>
+        <input type='text'
+          value={enteredValue}
+          onChange={goalInputChangeHandler}
+        />
       </div>
 
-      <button type='submit'>Add Goal</button>
+      <Button type='submit'>Add Goal</Button>
     </form>
   )
 }
