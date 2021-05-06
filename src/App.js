@@ -24,7 +24,7 @@ const App = () => {
         <CourseInput onAddGoal={addGoalHandler} />
       </section>
       <section id='goals'>
-        <CourseGoalList />
+        <CourseGoalList items={courseGoals} />
       </section>
     </div>
   );
