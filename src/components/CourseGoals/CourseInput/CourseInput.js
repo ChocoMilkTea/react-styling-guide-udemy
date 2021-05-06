@@ -1,14 +1,14 @@
-import './CourseInput';
+import './CourseInput.css';
 
 const CourseInput = () => {
   return (
     <form>
-      <div>
+      <div className='form-control'>
         <label>Course Goal</label>
         <input type='text'></input>
       </div>
 
-      <button>Add Goal</button>
+      <button type='submit'>Add Goal</button>
     </form>
   )
 }
